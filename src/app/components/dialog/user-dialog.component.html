@@ -1,7 +1,7 @@
 <h2 mat-dialog-title>{{isEditing ? 'Editar' : 'Nuevo'}} Usuario</h2>
     <mat-dialog-content>
       <form [formGroup]="userForm">
-        <mat-form-field appearance="outline">
+        <mat-form-field appearance="outline" class="mt-2">
           <mat-label>Nombre</mat-label>
           <input matInput formControlName="first_name" required>
         </mat-form-field>

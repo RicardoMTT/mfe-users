@@ -6,7 +6,7 @@ import { MatDialogRef, MAT_DIALOG_DATA, MatDialogModule } from '@angular/materia
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { User } from "../model/user.interface";
+import { User } from "../../model/user.interface";
 
 @Component({
   selector: 'app-root',

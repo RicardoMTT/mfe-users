@@ -1,24 +1,24 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { AppComponent } from './app.component';
-import { UsersService } from './users/service/user.service';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { of, throwError } from 'rxjs';
-import { User } from './users/model/user.interface';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { UserTableComponent } from './user-table.component';
+import { UsersService } from '../../services/user.service';
+import { User } from '../../model/user.interface';
 
 const MOCK_USERS_WITHOUT_PAGINATE = [{"id":1,"email":"george.bluth@reqres.in","first_name":"George","last_name":"Bluth","avatar":"https://reqres.in/img/faces/1-image.jpg"},{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},{"id":3,"email":"emma.wong@reqres.in","first_name":"Emma","last_name":"Wong","avatar":"https://reqres.in/img/faces/3-image.jpg"},{"id":4,"email":"eve.holt@reqres.in","first_name":"Eve","last_name":"Holt","avatar":"https://reqres.in/img/faces/4-image.jpg"},{"id":5,"email":"charles.morris@reqres.in","first_name":"Charles","last_name":"Morris","avatar":"https://reqres.in/img/faces/5-image.jpg"},{"id":6,"email":"tracey.ramos@reqres.in","first_name":"Tracey","last_name":"Ramos","avatar":"https://reqres.in/img/faces/6-image.jpg"}];
 
 const TOTAL_USERS_PAGINATE = {"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"email":"george.bluth@reqres.in","first_name":"George","last_name":"Bluth","avatar":"https://reqres.in/img/faces/1-image.jpg"},{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},{"id":3,"email":"emma.wong@reqres.in","first_name":"Emma","last_name":"Wong","avatar":"https://reqres.in/img/faces/3-image.jpg"},{"id":4,"email":"eve.holt@reqres.in","first_name":"Eve","last_name":"Holt","avatar":"https://reqres.in/img/faces/4-image.jpg"},{"id":5,"email":"charles.morris@reqres.in","first_name":"Charles","last_name":"Morris","avatar":"https://reqres.in/img/faces/5-image.jpg"},{"id":6,"email":"tracey.ramos@reqres.in","first_name":"Tracey","last_name":"Ramos","avatar":"https://reqres.in/img/faces/6-image.jpg"}],"support":{"url":"https://contentcaddy.io?utm_source=reqres&utm_medium=json&utm_campaign=referral","text":"Tired of writing endless social media content? Let Content Caddy generate it for you."}};
 
 
-describe('AppComponent', () => {
+describe('UserTableComponent', () => {
 
-  let component: AppComponent;
-  let fixture: ComponentFixture<AppComponent>;
+  let component: UserTableComponent;
+  let fixture: ComponentFixture<UserTableComponent>;
   let mockUsersService: jasmine.SpyObj<UsersService>;
   let mockDialog: jasmine.SpyObj<MatDialog>;
   let mockSnackBar: jasmine.SpyObj<MatSnackBar>;
@@ -36,7 +36,7 @@ describe('AppComponent', () => {
 
     await TestBed.configureTestingModule({
       imports: [
-        AppComponent, MatTableModule,
+        UserTableComponent, MatTableModule,
         MatPaginatorModule,
         MatSortModule,
         MatDialogModule,
@@ -49,7 +49,7 @@ describe('AppComponent', () => {
         { provide: MatSnackBar, useValue: mockSnackBar },
       ],
     }).compileComponents();
-    fixture = TestBed.createComponent(AppComponent);
+    fixture = TestBed.createComponent(UserTableComponent);
 
     component = fixture.componentInstance;
 
@@ -65,7 +65,7 @@ describe('AppComponent', () => {
 
 
   it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
+    const fixture = TestBed.createComponent(UserTableComponent);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
   });
