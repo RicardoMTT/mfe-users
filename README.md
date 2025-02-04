@@ -1,27 +1,30 @@
 # MicroUser
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.7.
+MicroUser es un microfrontend que implementa un CRUD (Crear, Leer, Actualizar, Eliminar) para la gestión de usuarios. Este proyecto está construido con Angular con Module Federation y utiliza servicios para interactuar con una API de usuarios.
 
-## Development server
+## Características
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Crear nuevos usuarios
+- Leer y listar usuarios existentes
+- Actualizar información de usuarios
+- Eliminar usuarios
 
-## Code scaffolding
+## Requisitos
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Node.js
+- Angular CLI
 
-## Build
+## Instalación
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. Clona el repositorio:
+   ```
+   git clone https://gitlab.com/RicardoT003/mfe-user.git
+   ```
+2. Navega al directorio del proyecto:
+   ```
+   cd mfe-user
+   ```
+3. Instalar las dependencias:
+   ```
+   npm install
+   ```
