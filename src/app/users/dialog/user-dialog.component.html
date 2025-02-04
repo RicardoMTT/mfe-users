@@ -1,0 +1,27 @@
+<h2 mat-dialog-title>{{isEditing ? 'Editar' : 'Nuevo'}} Usuario</h2>
+    <mat-dialog-content>
+      <form [formGroup]="userForm">
+        <mat-form-field appearance="outline">
+          <mat-label>Nombre</mat-label>
+          <input matInput formControlName="first_name" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Apellido</mat-label>
+          <input matInput formControlName="last_name" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput formControlName="email" required type="email">
+        </mat-form-field>
+      </form>
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+      <button mat-button mat-dialog-close>Cancelar</button>
+      <button mat-raised-button color="primary"
+              [disabled]="userForm.invalid"
+              (click)="onSubmit()">
+        {{isEditing ? 'Actualizar' : 'Crear'}}
+      </button>
+    </mat-dialog-actions>
