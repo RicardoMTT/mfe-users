@@ -28,3 +28,7 @@ MicroUser es un microfrontend que implementa un CRUD (Crear, Leer, Actualizar, E
    ```
    npm install
    ```
+4. Ejecutar la aplicación:
+   ```
+   ng serve
+   ```
