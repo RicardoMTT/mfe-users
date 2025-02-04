@@ -70,6 +70,12 @@ describe('UserTableComponent', () => {
     expect(app).toBeTruthy();
   });
 
+  /*
+    UNIT TEST WITH STANDAR AAA
+    ARRANGE
+    ACT
+    ASSERT
+  */
 
   it('should get a list of users', () => {
     // Arrange
