@@ -32,3 +32,13 @@ MicroUser es un microfrontend que implementa un CRUD (Crear, Leer, Actualizar, E
    ```
    ng serve
    ```
+## Pruebas unitarias
+
+1. Para la implementación de pruebas unitarias se uso el patrón AAA (Arrange-Act-Assert)
+   
+3. Ejecutar el comando :
+   
+   ```
+   ng test
+   ```
+
